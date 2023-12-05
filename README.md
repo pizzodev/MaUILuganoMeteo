@@ -3,8 +3,8 @@
 This is a sample for a #.NET MAUI# frameork app.
 
 <p float="center">
-  <img width="400" alt="Screenshot" src="/ReadmeFiles/app.png">
-  <img width="300" alt="Screenshot" src="/ReadmeFiles/maui-overview.png">
+  <img width="400" alt="Screenshot" src="MaUILuganoMeteo/ReadmeFiles/app.png">
+  <img width="300" alt="Screenshot" src="MaUILuganoMeteo/ReadmeFiles/maui-overview.png">
 </p>
 
 ## Modules
