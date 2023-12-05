@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MaUILuganoMeteo.ViewModels"
+             x:Class="MaUILuganoMeteo.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:ForecastViewModel/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="FillAndExpand">
+
+        <BoxView BackgroundColor="White" HeightRequest="0" />
+
+        <Label Text="Lugano forecasts for the next 7 days" FontSize="Header"></Label>
+
+        <CollectionView
+            BackgroundColor="Wheat"
+            ItemsSource="{Binding forecasts}"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="Center">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Column="1"
+                            Text="{Binding time}"
+                            FontAttributes="Bold"
+                            FontSize="Header"/>
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{Binding weather}"
+                            FontAttributes="Italic"
+                            VerticalOptions="End" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button
+            x:Name="RefreshForecastsBtn"
+            Text="Refresh forecasts"
+            Clicked="RefreshForecastsBtn_Clicked"
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
+
