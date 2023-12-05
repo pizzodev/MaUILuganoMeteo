@@ -64,6 +64,7 @@
 	  <None Remove="Views\" />
 	  <None Remove="Model\" />
 	  <None Remove="Platforms\Android\Resources\mipmap\" />
+	  <None Remove="ReadmeFiles\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Services\" />
@@ -71,5 +72,6 @@
 	  <Folder Include="Views\" />
 	  <Folder Include="Model\" />
 	  <Folder Include="Platforms\Android\Resources\mipmap\" />
+	  <Folder Include="ReadmeFiles\" />
 	</ItemGroup>
 </Project>
